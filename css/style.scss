@@ -1,0 +1,36 @@
+/*
+  I.  Posicionamiento
+  II.  Box model
+  III.  Tipografia
+  IV  Visuales
+  V  Otros
+*/
+
+/* colores */
+$bitcoin-orange: #F7931A;
+$soft-orange: #FFE9D5;
+$secondary-blue: #1A9AF7;
+$soft-blue: #E7F5FF;
+$warm-black: #201E1C;
+$warm-black-1: #282623;
+$grey: #BABABA;
+$off-white: #FAF8F7;
+$just-white: #ffffff;
+
+/* font families */
+$fofa1: 'DM Sans', sans-serif;
+$fofa2: 'Inter', sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: $fofa2;
+}
+
+
+
