@@ -14,6 +14,7 @@ $soft-blue: #E7F5FF;
 $warm-black: #201E1C;
 $warm-black-1: #282623;
 $grey: #BABABA;
+$dark-grey: #757575;
 $off-white: #FAF8F7;
 $just-white: #ffffff;
 $linear-bg: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
@@ -111,11 +112,35 @@ html {
         height: auto;
         padding: 80px 0 30px;
         text-align: center;
+        .background-img {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            background-image: url('../assets/bitcoin.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
         &__text {
             width: 90%;
             min-width: 288px;
             max-width: 900px;
             margin: 0 auto;
+            h2 {
+                margin-bottom: 30px;
+                font-size: 2.4rem;
+                font-weight: bold;
+                line-height: 2.6rem;
+                color: $warm-black;
+            }
+            p {
+                margin-bottom: 30px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 1.6rem;
+                color: $dark-grey;
+            }
         }
     }
 }
