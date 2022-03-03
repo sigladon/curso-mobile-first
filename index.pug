@@ -1,5 +1,13 @@
 - var currencies = [["Bitcoin","$1.96","trending1"],["Ethereum","$0.07","trending2"],["Ripple","$2.15","trending3"],["Stellar","$4.96","trending4"]];
 - var fees = [["Bitrade","$12.96"],["Bitpreco","$13.07"],["Novadax","$13.15"],["Coinext","$14.96"]];
+-
+  var cards = [
+    ["clock","Tiempo real", "Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento."],
+    ["eye","No hay tasas escondidas","Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo."],
+    ["dollar","Compara monedas","No más rumores, con Babtabit sabrás el valor real de cada moneda en el mercado actual."],
+    ["check","Información confiable","Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan."]
+  ];
+
 mixin currencyTable(coin,price,trending)
     tr
         td.table__left= coin
@@ -9,6 +17,12 @@ mixin feeTable(coin, price)
     tr
         td.table__left= coin
         td.table__right= price
+
+mixin productCard(icon, title, desc)
+    article.card
+        span(class="card__icon "+icon)
+        h3.card__title= title
+        p.card__description= desc
 
 
 doctype html
@@ -52,7 +66,14 @@ html
                                     +feeTable(val[0],val[1])
                         .fee-table__date
                             p #[b Actualizado:] 19 Julio 23:48
-            section
+            section.product-detail
+                span.logo
+                div
+                    h2
+                    p
+                section.product-cards
+                    each val in cards
+                        +productCard(val[0],val[1],val[2])
             section
             section
         footer
