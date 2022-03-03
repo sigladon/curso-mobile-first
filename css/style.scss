@@ -280,6 +280,43 @@ html {
                 color: $grey1;
             }
         }
+        .product-cards {
+            .card {
+                width: 90%;
+                min-width: 288px;
+                max-width: 400px;
+                height: 154px;
+                margin: 15px auto;
+                padding: 15px;
+                background-color: $warm-black-1;
+                border-radius: 6px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.16);
+                &__icon {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    margin-bottom: 10px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                .clock {background-image: url('../assets/clock.svg')}
+                .eye {background-image: url('../assets/eye.svg')}
+                .dollar {background-image: url('../assets/dollar-sign.svg')}
+                .check {background-image: url('../assets/check-circle.svg')}
+                &__title {
+                    margin-bottom: 12px;
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    color: $just-white;
+                }
+                &__description {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 1.8rem;
+                    color: $grey1;
+                }
+            }
+        }
     }
 }
 
