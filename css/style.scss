@@ -14,6 +14,7 @@ $soft-blue: #E7F5FF;
 $warm-black: #201E1C;
 $warm-black-1: #282623;
 $grey: #BABABA;
+$grey1: #808080;
 $dark-grey: #757575;
 $off-white: #FAF8F7;
 $just-white: #ffffff;
@@ -238,6 +239,45 @@ html {
                 }
                 .currency-table__date {background-color: $soft-orange;}
                 .fee-table__date {background-color: $soft-blue;}
+            }
+        }
+    }
+    .product-detail {
+        position: relative;
+        width: 100%;
+        min-width: 320px;
+        height: auto;
+        padding: 20px 10px;
+        background-color: $warm-black;
+        .product-detail__logo {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 42px;
+            height: 25px;
+            background-image: url('../assets/logo03.svg');
+            background-size: cover;
+        }
+        .product-detail__title {
+            width: 90%;
+            min-width: 288px;
+            height: auto;
+            margin: 20px auto 0;
+            text-align: center;
+            h2 {
+                margin-bottom: 20px;
+                font-size: 2.4rem;
+                font-weight: bold;
+                line-height: 2.6rem;
+                color: $just-white;
+            }
+            p {
+                margin-bottom: 20px;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 1.8rem;
+                color: $grey1;
             }
         }
     }
