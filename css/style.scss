@@ -155,6 +155,8 @@ html {
                     font-size: 1.8rem;
                     font-weight: bold;
                     line-height: 2.3rem;
+                    text-align: left;
+                    padding-left: 12%;
                 }
                 .currency-table__title {
                     color: $bitcoin-orange;
@@ -171,6 +173,16 @@ html {
                     table {
                         width: 100%;
                         height: 100%;
+                        tr {
+                            &:nth-child(1) {
+                                .table__left {border-radius: 15px 0 0 0}
+                                .table__right {border-radius: 0 15px 0 0}
+                            }
+                            &:nth-child(4) {
+                                .table__left {border-radius: 0 0 0 15px}
+                                .table__right {border-radius: 0 0 15px 0}
+                            }
+                        }
                         td {
                             width: 50%;
                             font-size: 1.6rem;
@@ -198,8 +210,8 @@ html {
                         }
                         .trending1 {background-image: url('../assets/trending01.svg')}
                         .trending2 {background-image: url('../assets/trending02.svg')}
-                        .trending3 {background-image: url('../assets/trending03.svg')} 
-                        .trending4 {background-image: url('../assets/trending04.svg')} 
+                        .trending3 {background-image: url('../assets/trending01.svg')} 
+                        .trending4 {background-image: url('../assets/trending01.svg')} 
                     }
                 }
                 .fee-table__container {
@@ -210,6 +222,22 @@ html {
                         }
                     }
                 }
+                .currency-table__date,
+                .fee-table__date {
+                    width: 190px;
+                    height: 30px;
+                    margin: 0 auto;
+                    margin-top: 15px;
+                    padding: 8px;
+                    border-radius: 8px;
+                    p {
+                        font-size: 1.2rem;
+                        line-height: 1.5rem;
+                        color: $warm-black;
+                    }
+                }
+                .currency-table__date {background-color: $soft-orange;}
+                .fee-table__date {background-color: $soft-blue;}
             }
         }
     }
