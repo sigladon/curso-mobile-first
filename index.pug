@@ -1,3 +1,16 @@
+- var currencies = [["Bitcoin","$1.96","trending1"],["Ethereum","$0.07","trending2"],["Ripple","$2.15","trending3"],["Stellar","$4.96","trending4"]];
+- var fees = [["Bitrade","$12.96"],["Bitpreco","$13.07"],["Novadax","$13.15"],["Coinext","$14.96"]];
+mixin currencyTable(coin,price,trending)
+    tr
+        td.table__left= coin
+        td.table__right= price
+            span(class=trending)
+mixin feeTable(coin, price)
+    tr
+        td.table__left= coin
+        td.table__right= price
+
+
 doctype html
 html
     head
@@ -23,7 +36,22 @@ html
                     h2 Visibilizamos todas las tasas de cambio.
                     p Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.
                 section.tables-container
-                    div
+                    .currency-table
+                        h3.currency-table__title Monedas
+                        div(class="currency-table__container table")
+                            table
+                                each val in currencies
+                                    +currencyTable(val[0],val[1],val[2])
+                        .currency-table__date
+                            p #[b Actualizado:] 19 Julio 23:45
+                    .fee-table
+                        h3.fee-table__title Monedas
+                        div(class="fee-table__container table")
+                            table
+                                each val in fees
+                                    +feeTable(val[0],val[1])
+                        .fee_date
+                            p #[b Actualizado:] 19 Julio 23:48
             section
             section
             section
