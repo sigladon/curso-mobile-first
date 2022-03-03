@@ -142,3 +142,71 @@ html {
   line-height: 1.6rem;
   color: #757575;
 }
+.main .exchange-container .tables-container .table-div {
+  width: 70%;
+  min-width: 235px;
+  max-width: 500px;
+  height: 360px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+}
+.main .exchange-container .tables-container .table-div h3 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+}
+.main .exchange-container .tables-container .table-div .currency-table__title {
+  color: #F7931A;
+}
+.main .exchange-container .tables-container .table-div .fee-table__title {
+  color: #1A9AF7;
+}
+.main .exchange-container .tables-container .table-div .table {
+  width: 90%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+}
+.main .exchange-container .tables-container .table-div .table table {
+  width: 100%;
+  height: 100%;
+}
+.main .exchange-container .tables-container .table-div .table table td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: #BABABA;
+  background-color: #ffffff;
+}
+.main .exchange-container .tables-container .table-div .table table .table__left, .main .exchange-container .tables-container .table-div .table table .table__right {
+  padding-left: 16px;
+  text-align: left;
+}
+.main .exchange-container .tables-container .table-div .currency-table__container .table__right span {
+  display: inline-block;
+  margin-left: 16px;
+  width: 18px;
+  height: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main .exchange-container .tables-container .table-div .currency-table__container .table__right .trending1 {
+  background-image: url("../assets/trending01.svg");
+}
+.main .exchange-container .tables-container .table-div .currency-table__container .table__right .trending2 {
+  background-image: url("../assets/trending02.svg");
+}
+.main .exchange-container .tables-container .table-div .currency-table__container .table__right .trending3 {
+  background-image: url("../assets/trending03.svg");
+}
+.main .exchange-container .tables-container .table-div .currency-table__container .table__right .trending4 {
+  background-image: url("../assets/trending04.svg");
+}
+.main .exchange-container .tables-container .table-div .fee-table__container table .table__right {
+  padding-left: 0;
+  text-align: center;
+}

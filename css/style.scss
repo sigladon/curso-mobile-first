@@ -142,6 +142,76 @@ html {
                 color: $dark-grey;
             }
         }
+        .tables-container {
+            .table-div {
+                width: 70%;
+                min-width: 235px;
+                max-width: 500px;
+                height: 360px;
+                margin: 0 auto;
+                font-family: $fofa2;
+                h3 {
+                    margin-bottom: 15px;
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    line-height: 2.3rem;
+                }
+                .currency-table__title {
+                    color: $bitcoin-orange;
+                }
+                .fee-table__title {
+                    color: $secondary-blue;
+                }
+                .table {
+                    width: 90%;
+                    min-width: 230px;
+                    max-width: 300px;
+                    height: 250px;
+                    margin: 0 auto;
+                    table {
+                        width: 100%;
+                        height: 100%;
+                        td {
+                            width: 50%;
+                            font-size: 1.6rem;
+                            font-weight: 500;
+                            line-height: 1.9rem;
+                            color: $grey;
+                            background-color: $just-white;
+                        }
+                        .table__left, .table__right {
+                            padding-left: 16px;
+                            text-align: left;
+                        }
+                    }
+                }
+                .currency-table__container {
+                    .table__right {
+                        span {
+                            display: inline-block;
+                            margin-left: 16px;
+                            width: 18px;
+                            height: 14px;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                        .trending1 {background-image: url('../assets/trending01.svg')}
+                        .trending2 {background-image: url('../assets/trending02.svg')}
+                        .trending3 {background-image: url('../assets/trending03.svg')} 
+                        .trending4 {background-image: url('../assets/trending04.svg')} 
+                    }
+                }
+                .fee-table__container {
+                    table {
+                        .table__right {
+                            padding-left: 0;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
