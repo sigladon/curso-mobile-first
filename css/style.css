@@ -16,7 +16,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .header {
@@ -142,15 +142,26 @@ html {
   line-height: 1.6rem;
   color: #757575;
 }
-.main .exchange-container .tables-container .table-div {
-  width: 70%;
+.main .exchange-container .tables-container {
+  position: relative;
+  width: 100%;
+}
+.main .exchange-container .tables-container .slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200vw;
+  overflow: hidden;
+}
+.main .exchange-container .tables-container .slider .table-div {
+  width: 70vw;
   min-width: 235px;
   max-width: 500px;
   height: 360px;
-  margin: 0 auto;
+  margin: 0 15vw;
   font-family: "Inter", sans-serif;
 }
-.main .exchange-container .tables-container .table-div h3 {
+.main .exchange-container .tables-container .slider .table-div h3 {
   margin-bottom: 15px;
   font-size: 1.8rem;
   font-weight: bold;
@@ -158,36 +169,36 @@ html {
   text-align: left;
   padding-left: 12%;
 }
-.main .exchange-container .tables-container .table-div .currency-table__title {
+.main .exchange-container .tables-container .slider .table-div .currency-table__title {
   color: #F7931A;
 }
-.main .exchange-container .tables-container .table-div .fee-table__title {
+.main .exchange-container .tables-container .slider .table-div .fee-table__title {
   color: #1A9AF7;
 }
-.main .exchange-container .tables-container .table-div .table {
+.main .exchange-container .tables-container .slider .table-div .table {
   width: 90%;
   min-width: 230px;
   max-width: 300px;
   height: 250px;
   margin: 0 auto;
 }
-.main .exchange-container .tables-container .table-div .table table {
+.main .exchange-container .tables-container .slider .table-div .table table {
   width: 100%;
   height: 100%;
 }
-.main .exchange-container .tables-container .table-div .table table tr:nth-child(1) .table__left {
+.main .exchange-container .tables-container .slider .table-div .table table tr:nth-child(1) .table__left {
   border-radius: 15px 0 0 0;
 }
-.main .exchange-container .tables-container .table-div .table table tr:nth-child(1) .table__right {
+.main .exchange-container .tables-container .slider .table-div .table table tr:nth-child(1) .table__right {
   border-radius: 0 15px 0 0;
 }
-.main .exchange-container .tables-container .table-div .table table tr:nth-child(4) .table__left {
+.main .exchange-container .tables-container .slider .table-div .table table tr:nth-child(4) .table__left {
   border-radius: 0 0 0 15px;
 }
-.main .exchange-container .tables-container .table-div .table table tr:nth-child(4) .table__right {
+.main .exchange-container .tables-container .slider .table-div .table table tr:nth-child(4) .table__right {
   border-radius: 0 0 15px 0;
 }
-.main .exchange-container .tables-container .table-div .table table td {
+.main .exchange-container .tables-container .slider .table-div .table table td {
   width: 50%;
   font-size: 1.6rem;
   font-weight: 500;
@@ -195,11 +206,11 @@ html {
   color: #BABABA;
   background-color: #ffffff;
 }
-.main .exchange-container .tables-container .table-div .table table .table__left, .main .exchange-container .tables-container .table-div .table table .table__right {
+.main .exchange-container .tables-container .slider .table-div .table table .table__left, .main .exchange-container .tables-container .slider .table-div .table table .table__right {
   padding-left: 16px;
   text-align: left;
 }
-.main .exchange-container .tables-container .table-div .currency-table__container .table__right span {
+.main .exchange-container .tables-container .slider .table-div .currency-table__container .table__right span {
   display: inline-block;
   margin-left: 16px;
   width: 18px;
@@ -208,24 +219,24 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.main .exchange-container .tables-container .table-div .currency-table__container .table__right .trending1 {
+.main .exchange-container .tables-container .slider .table-div .currency-table__container .table__right .trending1 {
   background-image: url("../assets/trending01.svg");
 }
-.main .exchange-container .tables-container .table-div .currency-table__container .table__right .trending2 {
+.main .exchange-container .tables-container .slider .table-div .currency-table__container .table__right .trending2 {
   background-image: url("../assets/trending02.svg");
 }
-.main .exchange-container .tables-container .table-div .currency-table__container .table__right .trending3 {
+.main .exchange-container .tables-container .slider .table-div .currency-table__container .table__right .trending3 {
   background-image: url("../assets/trending01.svg");
 }
-.main .exchange-container .tables-container .table-div .currency-table__container .table__right .trending4 {
+.main .exchange-container .tables-container .slider .table-div .currency-table__container .table__right .trending4 {
   background-image: url("../assets/trending01.svg");
 }
-.main .exchange-container .tables-container .table-div .fee-table__container table .table__right {
+.main .exchange-container .tables-container .slider .table-div .fee-table__container table .table__right {
   padding-left: 0;
   text-align: center;
 }
-.main .exchange-container .tables-container .table-div .currency-table__date,
-.main .exchange-container .tables-container .table-div .fee-table__date {
+.main .exchange-container .tables-container .slider .table-div .currency-table__date,
+.main .exchange-container .tables-container .slider .table-div .fee-table__date {
   width: 190px;
   height: 30px;
   margin: 0 auto;
@@ -233,17 +244,43 @@ html {
   padding: 8px;
   border-radius: 8px;
 }
-.main .exchange-container .tables-container .table-div .currency-table__date p,
-.main .exchange-container .tables-container .table-div .fee-table__date p {
+.main .exchange-container .tables-container .slider .table-div .currency-table__date p,
+.main .exchange-container .tables-container .slider .table-div .fee-table__date p {
   font-size: 1.2rem;
   line-height: 1.5rem;
   color: #201E1C;
 }
-.main .exchange-container .tables-container .table-div .currency-table__date {
+.main .exchange-container .tables-container .slider .table-div .currency-table__date {
   background-color: #FFE9D5;
 }
-.main .exchange-container .tables-container .table-div .fee-table__date {
+.main .exchange-container .tables-container .slider .table-div .fee-table__date {
   background-color: #E7F5FF;
+}
+.main .exchange-container .tables-container .slider1btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 28px;
+  height: 100%;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+}
+.main .exchange-container .tables-container #slider1NextBtn {
+  right: 16px;
+}
+.main .exchange-container .tables-container #slider1PreviousBtn {
+  left: 16px;
 }
 .main .product-detail {
   position: relative;
@@ -289,7 +326,6 @@ html {
   width: 90%;
   min-width: 288px;
   max-width: 400px;
-  height: 154px;
   margin: 15px auto;
   padding: 15px;
   background-color: #282623;
@@ -328,4 +364,25 @@ html {
   font-weight: 500;
   line-height: 1.8rem;
   color: #808080;
+}
+.main .autofill {
+  width: 100%;
+  min-width: 320px;
+  height: 60vh;
+  background-image: url("../assets/bitcoinbaby.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main .autofill h2 {
+  padding-top: 20%;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.btnOff {
+  display: none;
 }

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+<!-- 19 39 99-->
+<!-- 228 156 99-->
+<!-- 0 72 129--><!DOCTYPE html>
 <html>
   <head>
     <title>Document</title>
@@ -24,87 +27,128 @@
           <p>Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
         </div>
         <section class="tables-container">
-          <div class="currency-table table-div">
-            <h3 class="currency-table__title">Monedas</h3>
-            <div class="currency-table__container table">
-              <table>
-                <tr>
-                  <td class="table__left">Bitcoin</td>
-                  <td class="table__right">$1.96<span class="trending1"></span></td>
-                </tr>
-                <tr>
-                  <td class="table__left">Ethereum</td>
-                  <td class="table__right">$0.07<span class="trending2"></span></td>
-                </tr>
-                <tr>
-                  <td class="table__left">Ripple</td>
-                  <td class="table__right">$2.15<span class="trending3"></span></td>
-                </tr>
-                <tr>
-                  <td class="table__left">Stellar</td>
-                  <td class="table__right">$4.96<span class="trending4"></span></td>
-                </tr>
-              </table>
+          <div class="slider" id="slider1">
+            <div class="currency-table table-div">
+              <h3 class="currency-table__title">Monedas</h3>
+              <div class="currency-table__container table">
+                <table>
+                  <tr>
+                    <td class="table__left">Bitcoin</td>
+                    <td class="table__right">$1.96<span class="trending1"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Ethereum</td>
+                    <td class="table__right">$0.07<span class="trending2"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Ripple</td>
+                    <td class="table__right">$2.15<span class="trending3"></span></td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Stellar</td>
+                    <td class="table__right">$4.96<span class="trending4"></span></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="currency-table__date">
+                <p><b>Actualizado:</b> 19 Julio 23:45</p>
+              </div>
             </div>
-            <div class="currency-table__date">
-              <p><b>Actualizado:</b> 19 Julio 23:45</p>
+            <div class="fee-table table-div">
+              <h3 class="fee-table__title">Comisiones</h3>
+              <div class="fee-table__container table">
+                <table>
+                  <tr>
+                    <td class="table__left">Bitrade</td>
+                    <td class="table__right">$12.96</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Bitpreco</td>
+                    <td class="table__right">$13.07</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Novadax</td>
+                    <td class="table__right">$13.15</td>
+                  </tr>
+                  <tr>
+                    <td class="table__left">Coinext</td>
+                    <td class="table__right">$14.96</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="fee-table__date">
+                <p><b>Actualizado:</b> 19 Julio 23:48</p>
+              </div>
             </div>
           </div>
-          <div class="fee-table table-div">
-            <h3 class="fee-table__title">Comisiones</h3>
-            <div class="fee-table__container table">
-              <table>
-                <tr>
-                  <td class="table__left">Bitrade</td>
-                  <td class="table__right">$12.96</td>
-                </tr>
-                <tr>
-                  <td class="table__left">Bitpreco</td>
-                  <td class="table__right">$13.07</td>
-                </tr>
-                <tr>
-                  <td class="table__left">Novadax</td>
-                  <td class="table__right">$13.15</td>
-                </tr>
-                <tr>
-                  <td class="table__left">Coinext</td>
-                  <td class="table__right">$14.96</td>
-                </tr>
-              </table>
-            </div>
-            <div class="fee-table__date">
-              <p><b>Actualizado:</b> 19 Julio 23:48</p>
-            </div>
+          <div class="slider1btn" id="slider1NextBtn">
+            <p>></p>
           </div>
-        </section>
-        <section class="product-detail"><span class="product-detail__logo"></span>
-          <div class="product-detail__title">
-            <h2>Creamos un producto sin comparación.</h2>
-            <p>Confiable y diseñado para su uso diario.</p>
+          <div class="slider1btn" id="slider1PreviousBtn">
+            <p><</p>
           </div>
-          <section class="product-cards">
-            <article class="card"><span class="card__icon clock"></span>
-              <h3 class="card__title">Tiempo real</h3>
-              <p class="card__description">Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
-            </article>
-            <article class="card"><span class="card__icon eye"></span>
-              <h3 class="card__title">No hay tasas escondidas</h3>
-              <p class="card__description">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
-            </article>
-            <article class="card"><span class="card__icon dollar"></span>
-              <h3 class="card__title">Compara monedas</h3>
-              <p class="card__description">No más rumores, con Babtabit sabrás el valor real de cada moneda en el mercado actual.</p>
-            </article>
-            <article class="card"><span class="card__icon check"></span>
-              <h3 class="card__title">Información confiable</h3>
-              <p class="card__description">Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
-            </article>
-          </section>
         </section>
       </section>
-      <section></section>
-      <section></section>
+      <section class="product-detail"><span class="product-detail__logo"></span>
+        <div class="product-detail__title">
+          <h2>Creamos un producto sin comparación.</h2>
+          <p>Confiable y diseñado para su uso diario.</p>
+        </div>
+        <section class="product-cards">
+          <article class="card"><span class="card__icon clock"></span>
+            <h3 class="card__title">Tiempo real</h3>
+            <p class="card__description">Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
+          </article>
+          <article class="card"><span class="card__icon eye"></span>
+            <h3 class="card__title">No hay tasas escondidas</h3>
+            <p class="card__description">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
+          </article>
+          <article class="card"><span class="card__icon dollar"></span>
+            <h3 class="card__title">Compara monedas</h3>
+            <p class="card__description">No más rumores, con Babtabit sabrás el valor real de cada moneda en el mercado actual.</p>
+          </article>
+          <article class="card"><span class="card__icon check"></span>
+            <h3 class="card__title">Información confiable</h3>
+            <p class="card__description">Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
+          </article>
+        </section>
+      </section>
+      <section class="autofill">
+        <h2>Conócelo hoy.</h2>
+      </section>
+      <section class="prices">
+        <div class="slider" id="slider2">
+          <article class="price">
+            <p class="price__isRecomended">Recomendado</p>
+            <div class="about-price">
+              <h3 class="about-price__tipe">Pago Anual</h3>
+              <p class="about-price__amount"><span>$</span>= price</p>
+              <p class="about-price__saving">*Ahorras $129 comparado al plan mensual.</p>
+              <button class="about-price__choose">Escoger este<span></span></button>
+            </div>
+          </article>
+          <article class="price">
+            <p class="price__isRecomended"></p>
+            <div class="about-price">
+              <h3 class="about-price__tipe">Pago Trimestral</h3>
+              <p class="about-price__amount"><span>$</span>= price</p>
+              <p class="about-price__saving">Ahorras $72 comparado al plan mensual.</p>
+              <button class="about-price__choose">Escoger este<span></span></button>
+            </div>
+          </article>
+          <article class="price">
+            <p class="price__isRecomended"></p>
+            <div class="about-price">
+              <h3 class="about-price__tipe">Pago Mensual</h3>
+              <p class="about-price__amount"><span>$</span>= price</p>
+              <p class="about-price__saving"></p>
+              <button class="about-price__choose">Escoger este<span></span></button>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
     <footer></footer>
+    <script src="./js/slider1.js"></script>
   </body>
 </html>

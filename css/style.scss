@@ -32,7 +32,7 @@ $fofa2: 'Inter', sans-serif;
 
 html {
     font-size: 62.5%;
-    font-family: $fofa2;
+    font-family: $fofa1;
 }
 
 .header {
@@ -144,102 +144,123 @@ html {
             }
         }
         .tables-container {
-            .table-div {
-                width: 70%;
-                min-width: 235px;
-                max-width: 500px;
-                height: 360px;
-                margin: 0 auto;
-                font-family: $fofa2;
-                h3 {
-                    margin-bottom: 15px;
-                    font-size: 1.8rem;
-                    font-weight: bold;
-                    line-height: 2.3rem;
-                    text-align: left;
-                    padding-left: 12%;
-                }
-                .currency-table__title {
-                    color: $bitcoin-orange;
-                }
-                .fee-table__title {
-                    color: $secondary-blue;
-                }
-                .table {
-                    width: 90%;
-                    min-width: 230px;
-                    max-width: 300px;
-                    height: 250px;
-                    margin: 0 auto;
-                    table {
-                        width: 100%;
-                        height: 100%;
-                        tr {
-                            &:nth-child(1) {
-                                .table__left {border-radius: 15px 0 0 0}
-                                .table__right {border-radius: 0 15px 0 0}
+            position: relative;
+            width: 100%;
+            .slider {
+                display: flex;
+                width: 200vw;
+                overflow: hidden;
+                .table-div {
+                    width: 70vw;
+                    min-width: 235px;
+                    max-width: 500px;
+                    height: 360px;
+                    margin: 0 15vw;
+                    font-family: $fofa2;
+                    h3 {
+                        margin-bottom: 15px;
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        line-height: 2.3rem;
+                        text-align: left;
+                        padding-left: 12%;
+                    }
+                    .currency-table__title {
+                        color: $bitcoin-orange;
+                    }
+                    .fee-table__title {
+                        color: $secondary-blue;
+                    }
+                    .table {
+                        width: 90%;
+                        min-width: 230px;
+                        max-width: 300px;
+                        height: 250px;
+                        margin: 0 auto;
+                        table {
+                            width: 100%;
+                            height: 100%;
+                            tr {
+                                &:nth-child(1) {
+                                    .table__left {border-radius: 15px 0 0 0}
+                                    .table__right {border-radius: 0 15px 0 0}
+                                }
+                                &:nth-child(4) {
+                                    .table__left {border-radius: 0 0 0 15px}
+                                    .table__right {border-radius: 0 0 15px 0}
+                                }
                             }
-                            &:nth-child(4) {
-                                .table__left {border-radius: 0 0 0 15px}
-                                .table__right {border-radius: 0 0 15px 0}
+                            td {
+                                width: 50%;
+                                font-size: 1.6rem;
+                                font-weight: 500;
+                                line-height: 1.9rem;
+                                color: $grey;
+                                background-color: $just-white;
                             }
-                        }
-                        td {
-                            width: 50%;
-                            font-size: 1.6rem;
-                            font-weight: 500;
-                            line-height: 1.9rem;
-                            color: $grey;
-                            background-color: $just-white;
-                        }
-                        .table__left, .table__right {
-                            padding-left: 16px;
-                            text-align: left;
+                            .table__left, .table__right {
+                                padding-left: 16px;
+                                text-align: left;
+                            }
                         }
                     }
-                }
-                .currency-table__container {
-                    .table__right {
-                        span {
-                            display: inline-block;
-                            margin-left: 16px;
-                            width: 18px;
-                            height: 14px;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                        }
-                        .trending1 {background-image: url('../assets/trending01.svg')}
-                        .trending2 {background-image: url('../assets/trending02.svg')}
-                        .trending3 {background-image: url('../assets/trending01.svg')} 
-                        .trending4 {background-image: url('../assets/trending01.svg')} 
-                    }
-                }
-                .fee-table__container {
-                    table {
+                    .currency-table__container {
                         .table__right {
-                            padding-left: 0;
-                            text-align: center;
+                            span {
+                                display: inline-block;
+                                margin-left: 16px;
+                                width: 18px;
+                                height: 14px;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                            .trending1 {background-image: url('../assets/trending01.svg')}
+                            .trending2 {background-image: url('../assets/trending02.svg')}
+                            .trending3 {background-image: url('../assets/trending01.svg')} 
+                            .trending4 {background-image: url('../assets/trending01.svg')} 
                         }
                     }
-                }
-                .currency-table__date,
-                .fee-table__date {
-                    width: 190px;
-                    height: 30px;
-                    margin: 0 auto;
-                    margin-top: 15px;
-                    padding: 8px;
-                    border-radius: 8px;
-                    p {
-                        font-size: 1.2rem;
-                        line-height: 1.5rem;
-                        color: $warm-black;
+                    .fee-table__container {
+                        table {
+                            .table__right {
+                                padding-left: 0;
+                                text-align: center;
+                            }
+                        }
                     }
+                    .currency-table__date,
+                    .fee-table__date {
+                        width: 190px;
+                        height: 30px;
+                        margin: 0 auto;
+                        margin-top: 15px;
+                        padding: 8px;
+                        border-radius: 8px;
+                        p {
+                            font-size: 1.2rem;
+                            line-height: 1.5rem;
+                            color: $warm-black;
+                        }
+                    }
+                    .currency-table__date {background-color: $soft-orange;}
+                    .fee-table__date {background-color: $soft-blue;}
                 }
-                .currency-table__date {background-color: $soft-orange;}
-                .fee-table__date {background-color: $soft-blue;}
             }
+            .slider1btn {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 28px;
+                height: 100%;
+                font-size: 2.8rem;
+                line-height: 2.8rem;
+            }
+            #slider1NextBtn {right: 16px}
+            #slider1PreviousBtn {left: 16px}
         }
     }
     .product-detail {
@@ -285,7 +306,6 @@ html {
                 width: 90%;
                 min-width: 288px;
                 max-width: 400px;
-                height: 154px;
                 margin: 15px auto;
                 padding: 15px;
                 background-color: $warm-black-1;
@@ -318,5 +338,25 @@ html {
             }
         }
     }
+    .autofill {
+        width: 100%;
+        min-width: 320px;
+        height: 60vh;
+        background-image: url('../assets/bitcoinbaby.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        h2 {
+            padding-top: 20%;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 2.6rem;
+            color: $just-white;
+            text-align: center;
+        }
+    }
 }
 
+.btnOff {
+    display: none;
+}
