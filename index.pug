@@ -13,8 +13,8 @@
 -
     var prices = [
         ["Pago Anual","99","*Ahorras $129 comparado al plan mensual.","Recomendado"],
-        ["Pago Trimestral","39","Ahorras $72 comparado al plan mensual.",""],
-        ["Pago Mensual","19","",""],
+        ["Pago Trimestral","39","Ahorras $72 comparado al plan mensual."],
+        ["Pago Mensual","19"],
     ]; 
 
 mixin currencyTable(coin,price,trending)
@@ -38,7 +38,7 @@ mixin plan(type,price,saving,recomended)
         p.price__isRecomended= recomended
         .about-price
             h3.about-price__tipe= type
-            p.about-price__amount #[span $]= price
+            p.about-price__amount #[span $]#{price}
             p.about-price__saving= saving
             button.about-price__choose Escoger este
                 span
@@ -60,7 +60,7 @@ html
             .header__text
                 h1 La próxima revolución en el intercambio de criptomonedas.
                 p Batabit te ayuda a navegar entre los diferentes precios y tendencias.
-                a(href="") Conoce Nuestros Planes 
+                a(href="#prices") Conoce Nuestros Planes 
                     span
         main.main
             section.exchange-container
@@ -98,7 +98,9 @@ html
                         +productCard(val[0],val[1],val[2])
             section.autofill
                 h2 Conócelo hoy.
-            section.prices
+            section.prices#prices
+                h2.prices__title Escoge el plan que mejor se ajuste a ti.
+                p.prices__description Cualquier plan te da acceso completo a nuestra plataforma.
                 .slider#slider2
                     each val in prices
                         +plan(val[0],val[1],val[2],val[3])

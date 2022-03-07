@@ -385,3 +385,37 @@ html {
   color: #ffffff;
   text-align: center;
 }
+.main .prices {
+  width: 100%;
+  height: auto;
+  padding: 60px 0 70px;
+  overflow: hidden;
+  text-align: center;
+}
+.main .prices__title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: #201E1C;
+}
+.main .prices__description {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 12px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: #757575;
+}
+.main .prices .slider {
+  width: auto;
+}
+.main .prices .slider .price {
+  margin: 0 auto;
+}
