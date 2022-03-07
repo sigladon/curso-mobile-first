@@ -146,10 +146,10 @@ html {
         .tables-container {
             position: relative;
             width: 100%;
+            overflow: hidden;
             .slider {
                 display: flex;
-                width: 200vw;
-                overflow: hidden;
+                width: 1000%;
                 .table-div {
                     width: 70vw;
                     min-width: 235px;
@@ -261,6 +261,9 @@ html {
             }
             #slider1NextBtn {right: 16px}
             #slider1PreviousBtn {left: 16px}
+            .btnOff {
+                display: none;
+            }
         }
     }
     .product-detail {
@@ -357,6 +360,3 @@ html {
     }
 }
 
-.btnOff {
-    display: none;
-}

@@ -145,13 +145,13 @@ html {
 .main .exchange-container .tables-container {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 .main .exchange-container .tables-container .slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 200vw;
-  overflow: hidden;
+  width: 1000%;
 }
 .main .exchange-container .tables-container .slider .table-div {
   width: 70vw;
@@ -282,6 +282,9 @@ html {
 .main .exchange-container .tables-container #slider1PreviousBtn {
   left: 16px;
 }
+.main .exchange-container .tables-container .btnOff {
+  display: none;
+}
 .main .product-detail {
   position: relative;
   width: 100%;
@@ -381,8 +384,4 @@ html {
   line-height: 2.6rem;
   color: #ffffff;
   text-align: center;
-}
-
-.btnOff {
-  display: none;
 }
