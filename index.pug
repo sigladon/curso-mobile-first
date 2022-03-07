@@ -12,9 +12,9 @@
 // 0 72 129
 -
     var prices = [
-        ["Pago Anual","99","*Ahorras $129 comparado al plan mensual.","Recomendado"],
-        ["Pago Trimestral","39","Ahorras $72 comparado al plan mensual."],
         ["Pago Mensual","19"],
+        ["Pago Trimestral","39","*Ahorras $72 comparado al plan mensual."],
+        ["Pago Anual","99","*Ahorras $129 comparado al plan mensual.","Recomendado"],
     ]; 
 
 mixin currencyTable(coin,price,trending)
@@ -35,9 +35,9 @@ mixin productCard(icon, title, desc)
 
 mixin plan(type,price,saving,recomended)
     article.price
-        p.price__isRecomended= recomended
+        p.price__isRecomended(class= recomended)= recomended
         .about-price
-            h3.about-price__tipe= type
+            h3.about-price__type= type
             p.about-price__amount #[span $]#{price}
             p.about-price__saving= saving
             button.about-price__choose Escoger este
@@ -101,9 +101,12 @@ html
             section.prices#prices
                 h2.prices__title Escoge el plan que mejor se ajuste a ti.
                 p.prices__description Cualquier plan te da acceso completo a nuestra plataforma.
-                .slider#slider2
-                    each val in prices
-                        +plan(val[0],val[1],val[2],val[3])
+                .slider2container
+                    .slider#slider2(value="2")
+                        each val in prices
+                            +plan(val[0],val[1],val[2],val[3])
+                .slider2btn#slider2NextBtn: p >
+                .slider2btn#slider2PreviousBtn: p <
                 
         footer
         script(src="./js/slider1.js")

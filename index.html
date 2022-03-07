@@ -119,34 +119,42 @@
       <section class="prices" id="prices">
         <h2 class="prices__title">Escoge el plan que mejor se ajuste a ti.</h2>
         <p class="prices__description">Cualquier plan te da acceso completo a nuestra plataforma.</p>
-        <div class="slider" id="slider2">
-          <article class="price">
-            <p class="price__isRecomended">Recomendado</p>
-            <div class="about-price">
-              <h3 class="about-price__tipe">Pago Anual</h3>
-              <p class="about-price__amount"><span>$</span>99</p>
-              <p class="about-price__saving">*Ahorras $129 comparado al plan mensual.</p>
-              <button class="about-price__choose">Escoger este<span></span></button>
-            </div>
-          </article>
-          <article class="price">
-            <p class="price__isRecomended"></p>
-            <div class="about-price">
-              <h3 class="about-price__tipe">Pago Trimestral</h3>
-              <p class="about-price__amount"><span>$</span>39</p>
-              <p class="about-price__saving">Ahorras $72 comparado al plan mensual.</p>
-              <button class="about-price__choose">Escoger este<span></span></button>
-            </div>
-          </article>
-          <article class="price">
-            <p class="price__isRecomended"></p>
-            <div class="about-price">
-              <h3 class="about-price__tipe">Pago Mensual</h3>
-              <p class="about-price__amount"><span>$</span>19</p>
-              <p class="about-price__saving"></p>
-              <button class="about-price__choose">Escoger este<span></span></button>
-            </div>
-          </article>
+        <div class="slider2container">
+          <div class="slider" id="slider2" value="2">
+            <article class="price">
+              <p class="price__isRecomended"></p>
+              <div class="about-price">
+                <h3 class="about-price__type">Pago Mensual</h3>
+                <p class="about-price__amount"><span>$</span>19</p>
+                <p class="about-price__saving"></p>
+                <button class="about-price__choose">Escoger este<span></span></button>
+              </div>
+            </article>
+            <article class="price">
+              <p class="price__isRecomended"></p>
+              <div class="about-price">
+                <h3 class="about-price__type">Pago Trimestral</h3>
+                <p class="about-price__amount"><span>$</span>39</p>
+                <p class="about-price__saving">*Ahorras $72 comparado al plan mensual.</p>
+                <button class="about-price__choose">Escoger este<span></span></button>
+              </div>
+            </article>
+            <article class="price">
+              <p class="price__isRecomended Recomendado">Recomendado</p>
+              <div class="about-price">
+                <h3 class="about-price__type">Pago Anual</h3>
+                <p class="about-price__amount"><span>$</span>99</p>
+                <p class="about-price__saving">*Ahorras $129 comparado al plan mensual.</p>
+                <button class="about-price__choose">Escoger este<span></span></button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="slider2btn" id="slider2NextBtn">
+          <p>></p>
+        </div>
+        <div class="slider2btn" id="slider2PreviousBtn">
+          <p><</p>
         </div>
       </section>
     </main>

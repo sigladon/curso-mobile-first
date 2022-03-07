@@ -1,9 +1,6 @@
 const slider1 = document.querySelector("#slider1");
-const slider2 = document.querySelector("#slider2");
 let slider1Section = document.querySelectorAll(".table-div");
-let slider2Section = document.querySelectorAll(".price");
 slider1.value = 0;
-slider2.value = 0;
 const btnOff = "btnOff";
 const slider1Btns = document.querySelectorAll(".slider1btn");
 
@@ -38,4 +35,43 @@ slider1Btns[1].addEventListener('click', function(){
 slider1Btns[0].addEventListener('click', function(){
     const left = 1;
     sliderFn(slider1,slider1Section,slider1Btns,left);
+});
+
+
+const slider2 = document.querySelector("#slider2");
+let slider2Section = document.querySelectorAll(".price");
+let slider2SectionLast = slider2Section[slider2Section.length -1];
+const slider2Btns = document.querySelectorAll(".slider2btn");
+
+slider2.insertAdjacentElement('afterbegin', slider2SectionLast);
+
+function next() {
+    let sliderSectionFirst = document.querySelectorAll(".price")[0];
+    slider2.style.marginLeft = "-230px";
+    slider2.style.transition = "all 0.4s";
+    setTimeout(() => {
+        slider2.style.transition = "none";
+        slider2.insertAdjacentElement('beforeend', sliderSectionFirst);
+        slider2.style.marginLeft = "0";
+    }, 400);
+}
+
+function prev() {
+    let slider2Section = document.querySelectorAll(".price");
+    let slider2SectionLast = slider2Section[slider2Section.length -1];
+    slider2.style.marginLeft = "0";
+    slider2.style.transition = "all 0.4s";
+    setTimeout(() => {
+        slider2.style.transition = "none";
+        slider2.insertAdjacentElement('afterbegin', slider2SectionLast);
+        slider2.style.marginLeft = "-230px";
+    }, 400);
+}
+
+slider2Btns[0].addEventListener('click', function() {
+    next();
+});
+
+slider2Btns[1].addEventListener('click', function() {
+    prev();
 });

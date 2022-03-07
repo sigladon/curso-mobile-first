@@ -13,6 +13,7 @@ $secondary-blue: #1A9AF7;
 $soft-blue: #E7F5FF;
 $warm-black: #201E1C;
 $warm-black-1: #282623;
+$warm-black-2: #363636;
 $grey: #BABABA;
 $grey1: #808080;
 $dark-grey: #757575;
@@ -148,14 +149,15 @@ html {
             width: 100%;
             overflow: hidden;
             .slider {
-                display: flex;
-                width: 1000%;
+                display: grid;
+                grid-template-columns: repeat(2, 100vw);
+                transition: all 0.4s;
                 .table-div {
-                    width: 70vw;
+                    width: 70%;
                     min-width: 235px;
                     max-width: 500px;
                     height: 360px;
-                    margin: 0 15vw;
+                    margin: 0 auto;
                     font-family: $fofa2;
                     h3 {
                         margin-bottom: 15px;
@@ -345,7 +347,7 @@ html {
         width: 100%;
         min-width: 320px;
         height: 60vh;
-        background-image: url('../assets/bitcoinbaby.jpg');
+        background-image: url('../assets/bitcoinbaby.webp');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -359,11 +361,16 @@ html {
         }
     }
     .prices {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
         height: auto;
         padding: 60px 0 70px;
         overflow: hidden;
         text-align: center;
+        background-color: $off-white;
         &__title {
             width: 90%;
             min-width: 288px;
@@ -375,23 +382,127 @@ html {
             color: $warm-black;
         }
         &__description {
-            width: 90%;
+            width: 85%;
             min-width: 288px;
             height: auto;
-            margin: 0 auto;
-            margin-top: 12px;
+            margin: 12px auto 48px;
             font-size: 1.4rem;
             font-weight: 500;
             line-height: 1.8rem;
             color: $dark-grey;
         }
-        
-        .slider{
-            width: auto;
-            .price {
-                margin: 0 auto;
+        .slider2container {
+            display: flex;
+            align-items: center;
+            width: 230px;
+            overflow: hidden;
+            height: 270px;
+            .slider{
+                display: grid;
+                position: relative;
+                grid-template-columns: repeat(3, 230px);
+                .price {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    position: relative;
+                    width: 60%;
+                    min-width: 200px;
+                    height: 250px;
+                    margin: 0 auto;
+                    background-color: $just-white;
+                    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+                    border-radius: 8px;
+                    .Recomendado {
+                        position: absolute;
+                        top: -10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-family: $fofa2;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        padding: 8px;
+                        text-align: center;
+                        color: $just-white;
+                        background-color: $bitcoin-orange;
+                        border-radius: 8px;
+                    }
+                    .about-price {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        position: relative;
+                        height: 90%;
+                        &__type {
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                            line-height: 1.8rem;
+                        }
+                        &__amount {
+                            position: relative;
+                            font-family: $fofa2;
+                            font-size: 5.2rem;
+                            font-weight: 700;
+                            line-height: 6.3rem;
+                            span {
+                                display: inline-block;
+                                position: absolute;
+                                top: 6px;
+                                transform: translateX(-100%);
+                                font-size: 1.2rem;
+                                line-height: 1.4rem;
+                                color: $warm-black-2;
+                            }
+                        }
+                        &__saving {
+                            font-family: $fofa2;
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            line-height: 1.5rem;
+                            color: $dark-grey;
+                        }
+                        &__choose {
+                            width: 75%;
+                            height: 52px;
+                            margin: 0 auto;
+                            font-size: 1.4rem;
+                            font-weight: 700;
+                            line-height: 3rem;
+                            color: $warm-black;
+                            background-color: $off-white;
+                            border: 2px solid $bitcoin-orange;
+                            border-radius: 4px;
+                            span {
+                                display: inline-block;
+                                width: 24px;
+                                height: 24px;
+                                margin-left: 6px;
+                                margin-bottom: -6px;
+                                background-image: url(../assets/arrow-right.svg);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+
+                            }
+                        }
+                    }
+                }
             }
         }
+        .slider2btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 62%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 50%;
+            font-size: 2.8rem;
+            line-height: 2.8rem;
+            color: grey;
+        }
+        #slider2NextBtn {right: 4%}
+        #slider2PreviousBtn {left: 4%}
     }
 }
 

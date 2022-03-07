@@ -148,17 +148,19 @@ html {
   overflow: hidden;
 }
 .main .exchange-container .tables-container .slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1000%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (100vw)[2];
+  grid-template-columns: repeat(2, 100vw);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .main .exchange-container .tables-container .slider .table-div {
-  width: 70vw;
+  width: 70%;
   min-width: 235px;
   max-width: 500px;
   height: 360px;
-  margin: 0 15vw;
+  margin: 0 auto;
   font-family: "Inter", sans-serif;
 }
 .main .exchange-container .tables-container .slider .table-div h3 {
@@ -372,7 +374,7 @@ html {
   width: 100%;
   min-width: 320px;
   height: 60vh;
-  background-image: url("../assets/bitcoinbaby.jpg");
+  background-image: url("../assets/bitcoinbaby.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -386,11 +388,23 @@ html {
   text-align: center;
 }
 .main .prices {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: auto;
   padding: 60px 0 70px;
   overflow: hidden;
   text-align: center;
+  background-color: #FAF8F7;
 }
 .main .prices__title {
   width: 90%;
@@ -403,19 +417,158 @@ html {
   color: #201E1C;
 }
 .main .prices__description {
-  width: 90%;
+  width: 85%;
   min-width: 288px;
   height: auto;
-  margin: 0 auto;
-  margin-top: 12px;
+  margin: 12px auto 48px;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
   color: #757575;
 }
-.main .prices .slider {
-  width: auto;
+.main .prices .slider2container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 230px;
+  overflow: hidden;
+  height: 270px;
 }
-.main .prices .slider .price {
+.main .prices .slider2container .slider {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: (230px)[3];
+  grid-template-columns: repeat(3, 230px);
+}
+.main .prices .slider2container .slider .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 60%;
+  min-width: 200px;
+  height: 250px;
   margin: 0 auto;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+          box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+  border-radius: 8px;
+}
+.main .prices .slider2container .slider .price .Recomendado {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 8px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #F7931A;
+  border-radius: 8px;
+}
+.main .prices .slider2container .slider .price .about-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  height: 90%;
+}
+.main .prices .slider2container .slider .price .about-price__type {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+.main .prices .slider2container .slider .price .about-price__amount {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 6.3rem;
+}
+.main .prices .slider2container .slider .price .about-price__amount span {
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #363636;
+}
+.main .prices .slider2container .slider .price .about-price__saving {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #757575;
+}
+.main .prices .slider2container .slider .price .about-price__choose {
+  width: 75%;
+  height: 52px;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: #201E1C;
+  background-color: #FAF8F7;
+  border: 2px solid #F7931A;
+  border-radius: 4px;
+}
+.main .prices .slider2container .slider .price .about-price__choose span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 6px;
+  margin-bottom: -6px;
+  background-image: url(../assets/arrow-right.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main .prices .slider2btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 62%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 40px;
+  height: 50%;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  color: grey;
+}
+.main .prices #slider2NextBtn {
+  right: 4%;
+}
+.main .prices #slider2PreviousBtn {
+  left: 4%;
 }
