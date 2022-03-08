@@ -1,0 +1,120 @@
+.header {
+  height: 480px;
+}
+.header img {
+  width: 175px;
+  height: 28px;
+  margin-top: 16px;
+}
+.header__text {
+  width: 60%;
+}
+.header__text h1 {
+  font-size: 4rem;
+  line-height: 4.2rem;
+}
+.header__text p {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 0 20px;
+}
+
+.main .exchange-container {
+  padding-bottom: 76px;
+}
+.main .exchange-container__text {
+  width: 50%;
+}
+.main .exchange-container__text h2 {
+  font-size: 4rem;
+  line-height: 4.2rem;
+}
+.main .exchange-container__text p {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+.main .exchange-container .tables-container {
+  overflow: visible;
+}
+.main .exchange-container .tables-container .slider {
+  -ms-grid-columns: (auto)[2];
+  grid-template-columns: repeat(2, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: none;
+  transition: none;
+}
+.main .exchange-container .tables-container .slider .table-div {
+  margin: 0 20px;
+}
+.main .exchange-container .tables-container .slider1btn {
+  display: none;
+}
+.main .product-detail__logo {
+  width: 66px;
+  height: 40px;
+}
+.main .product-detail__title {
+  width: 60%;
+}
+.main .product-detail__title h2 {
+  font-size: 4rem;
+  line-height: 4.2rem;
+}
+.main .product-detail__title p {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+.main .product-detail .product-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+  grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[2];
+  grid-template-rows: repeat(2, auto);
+  width: 88%;
+  margin: 0 auto;
+}
+.main .product-detail .product-cards > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.main .product-detail .product-cards > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+.main .product-detail .product-cards > *:nth-child(3) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+.main .product-detail .product-cards > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+.main .product-detail .product-cards .card {
+  padding: 20px;
+}
+.main .autofill {
+  height: 300px;
+  background-image: url("../assets/bitcoinbaby2.png");
+}
+.main .prices__title {
+  width: 60%;
+  font-size: 4rem;
+  line-height: 4.2rem;
+}
+.main .prices__description {
+  width: 55%;
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+.main .prices .slider2container {
+  overflow: visible;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main .prices .slider2btn {
+  display: none;
+}

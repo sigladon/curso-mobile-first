@@ -52,7 +52,7 @@ html {
         margin-top: 60px;
         align-self: center;
     }
-    .header__text {
+    &__text {
         width: 90%;
         min-width: 288px;
         max-width: 900px;
@@ -76,8 +76,8 @@ html {
         a {
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
-            top: 270px;
+            bottom: 0;
+            transform: translate(-50%, 50%);
             display: block;
             margin-top: 35px;
             padding: 15px;
@@ -275,17 +275,17 @@ html {
         height: auto;
         padding: 20px 10px;
         background-color: $warm-black;
-        .product-detail__logo {
+        &__logo {
             position: absolute;
-            top: -10px;
+            top: 0;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             width: 42px;
             height: 25px;
             background-image: url('../assets/logo03.svg');
             background-size: cover;
         }
-        .product-detail__title {
+        &__title {
             width: 90%;
             min-width: 288px;
             height: auto;
@@ -344,6 +344,7 @@ html {
         }
     }
     .autofill {
+        position: relative;
         width: 100%;
         min-width: 320px;
         height: 60vh;
@@ -352,7 +353,10 @@ html {
         background-size: cover;
         background-repeat: no-repeat;
         h2 {
-            padding-top: 20%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 40%;
             font-size: 2.4rem;
             font-weight: 700;
             line-height: 2.6rem;

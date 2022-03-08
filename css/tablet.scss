@@ -1,0 +1,101 @@
+.header {
+    height: 480px;
+    img {
+        width: 175px;
+        height: 28px;
+        margin-top: 16px;
+    }
+    &__text {
+        width: 60%;
+        h1 {
+            font-size: 4rem;
+            line-height: 4.2rem;
+        }
+        p {
+            font-size: 2rem;
+            line-height: 2.4rem;
+            padding: 0 20px;
+        }
+    }
+}
+
+.main {
+    .exchange-container {
+        padding-bottom: 76px;
+        &__text {
+            width: 50%;
+            h2 {
+                font-size: 4rem;
+                line-height: 4.2rem;
+            }
+            p {
+                font-size: 2rem;
+                line-height: 2.4rem;
+            }
+        }
+        .tables-container {
+            overflow: visible;
+            .slider {
+                grid-template-columns: repeat(2, auto);
+                justify-content: center;
+                transition: none;
+                .table-div {
+                    margin: 0 20px;
+                }
+            }
+            .slider1btn {
+                display: none;
+            }
+        }
+    }
+    .product-detail {
+        &__logo {
+            width: 66px;
+            height: 40px;
+        }
+        &__title {
+            width: 60%;
+            h2 {
+                font-size: 4rem;
+                line-height: 4.2rem;
+            }
+            p {
+                font-size: 2rem;
+                line-height: 2.4rem;
+            }
+        }
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            width: 88%;
+            margin: 0 auto;
+            .card {
+                padding: 20px;
+            }
+        }
+    }
+    .autofill {
+        height: 300px;
+        background-image: url('../assets/bitcoinbaby2.png');
+    }
+    .prices {
+        &__title {
+            width: 60%;
+            font-size: 4rem;
+            line-height: 4.2rem;
+        }
+        &__description {
+            width: 55%;
+            font-size: 2rem;
+            line-height: 2.4rem;
+        }
+        .slider2container {
+            overflow: visible;
+            justify-content: center;
+        }
+        .slider2btn {
+            display: none;
+        }
+    }
+}

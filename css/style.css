@@ -45,7 +45,7 @@ html {
       -ms-grid-row-align: center;
       align-self: center;
 }
-.header .header__text {
+.header__text {
   width: 90%;
   min-width: 288px;
   max-width: 900px;
@@ -56,25 +56,25 @@ html {
       -ms-grid-row-align: center;
       align-self: center;
 }
-.header .header__text h1 {
+.header__text h1 {
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 2.6rem;
   color: #ffffff;
 }
-.header .header__text p {
+.header__text p {
   margin-top: 20px;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.8rem;
   color: #FFE9D5;
 }
-.header .header__text a {
+.header__text a {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 270px;
+  bottom: 0;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
   display: block;
   margin-top: 35px;
   padding: 15px;
@@ -92,7 +92,7 @@ html {
   color: #201E1C;
   cursor: pointer;
 }
-.header .header__text a span {
+.header__text a span {
   display: inline-block;
   width: 14px;
   height: 12px;
@@ -295,32 +295,32 @@ html {
   padding: 20px 10px;
   background-color: #201E1C;
 }
-.main .product-detail .product-detail__logo {
+.main .product-detail__logo {
   position: absolute;
-  top: -10px;
+  top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 42px;
   height: 25px;
   background-image: url("../assets/logo03.svg");
   background-size: cover;
 }
-.main .product-detail .product-detail__title {
+.main .product-detail__title {
   width: 90%;
   min-width: 288px;
   height: auto;
   margin: 20px auto 0;
   text-align: center;
 }
-.main .product-detail .product-detail__title h2 {
+.main .product-detail__title h2 {
   margin-bottom: 20px;
   font-size: 2.4rem;
   font-weight: bold;
   line-height: 2.6rem;
   color: #ffffff;
 }
-.main .product-detail .product-detail__title p {
+.main .product-detail__title p {
   margin-bottom: 20px;
   font-size: 1.4rem;
   font-weight: 500;
@@ -371,6 +371,7 @@ html {
   color: #808080;
 }
 .main .autofill {
+  position: relative;
   width: 100%;
   min-width: 320px;
   height: 60vh;
@@ -380,7 +381,11 @@ html {
   background-repeat: no-repeat;
 }
 .main .autofill h2 {
-  padding-top: 20%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 40%;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 2.6rem;

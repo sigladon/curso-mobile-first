@@ -40,10 +40,12 @@ slider1Btns[0].addEventListener('click', function(){
 
 const slider2 = document.querySelector("#slider2");
 let slider2Section = document.querySelectorAll(".price");
-let slider2SectionLast = slider2Section[slider2Section.length -1];
+let slider2SectionFirst = slider2Section[0];
 const slider2Btns = document.querySelectorAll(".slider2btn");
 
-slider2.insertAdjacentElement('afterbegin', slider2SectionLast);
+if (window.screen.width < 800) {
+    slider2.insertAdjacentElement('beforeend', slider2SectionFirst);
+}
 
 function next() {
     let sliderSectionFirst = document.querySelectorAll(".price")[0];
