@@ -74,6 +74,7 @@
   -ms-grid-rows: (auto)[2];
   grid-template-rows: repeat(2, auto);
   width: 88%;
+  max-width: 900px;
   margin: 0 auto;
 }
 .main .product-detail .product-cards > *:nth-child(1) {
