@@ -48,24 +48,24 @@ slider2.insertAdjacentElement('afterbegin', slider2SectionLast);
 function next() {
     let sliderSectionFirst = document.querySelectorAll(".price")[0];
     slider2.style.marginLeft = "-230px";
-    slider2.style.transition = "all 0.4s";
+    slider2.style.transition = "all 0.3s";
     setTimeout(() => {
         slider2.style.transition = "none";
         slider2.insertAdjacentElement('beforeend', sliderSectionFirst);
         slider2.style.marginLeft = "0";
-    }, 400);
+    }, 300);
 }
 
 function prev() {
     let slider2Section = document.querySelectorAll(".price");
     let slider2SectionLast = slider2Section[slider2Section.length -1];
     slider2.style.marginLeft = "0";
-    slider2.style.transition = "all 0.4s";
+    slider2.style.transition = "all 0.3s";
     setTimeout(() => {
         slider2.style.transition = "none";
         slider2.insertAdjacentElement('afterbegin', slider2SectionLast);
         slider2.style.marginLeft = "-230px";
-    }, 400);
+    }, 300);
 }
 
 slider2Btns[0].addEventListener('click', function() {

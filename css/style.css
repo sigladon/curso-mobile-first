@@ -443,6 +443,10 @@ html {
   position: relative;
   -ms-grid-columns: (230px)[3];
   grid-template-columns: repeat(3, 230px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 .main .prices .slider2container .slider .price {
   display: -webkit-box;
@@ -571,4 +575,32 @@ html {
 }
 .main .prices #slider2PreviousBtn {
   left: 4%;
+}
+
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4rem 0;
+  background-color: #F7931A;
+}
+.footer-nav .menu {
+  list-style: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+.footer-nav .menu__item {
+  margin: 8px 0;
+}
+.footer-nav .menu__item .menu__link {
+  text-decoration: none;
+  color: #ffffff;
 }

@@ -15,7 +15,9 @@
         ["Pago Mensual","19"],
         ["Pago Trimestral","39","*Ahorras $72 comparado al plan mensual."],
         ["Pago Anual","99","*Ahorras $129 comparado al plan mensual.","Recomendado"],
-    ]; 
+    ];
+
+- var footer = ["Linkedin","Crunchbase","Hackernews"];
 
 mixin currencyTable(coin,price,trending)
     tr
@@ -42,6 +44,9 @@ mixin plan(type,price,saving,recomended)
             p.about-price__saving= saving
             button.about-price__choose Escoger este
                 span
+
+mixin footerNav(item)
+    li.menu__item: a.menu__link(href="")= item
 
 
 doctype html
@@ -108,7 +113,14 @@ html
                 .slider2btn#slider2NextBtn: p >
                 .slider2btn#slider2PreviousBtn: p <
                 
-        footer
+        footer.footer
+            section.footer-nav
+                ul.menu
+                    each val in footer
+                        +footerNav(val)
+            section.footer-logo
+                img(src="./assets/logo02.svg" alt="Batatabit Logo")
+
         script(src="./js/slider1.js")
 
 
